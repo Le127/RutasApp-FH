@@ -12,7 +12,9 @@ Future<void> main() async {
   runApp(MultiBlocProvider(providers: [
     BlocProvider<GpsBloc>(create: (context) => GpsBloc()),
     BlocProvider<LocationBloc>(create: (context) => LocationBloc()),
-    BlocProvider<MapBloc>(create: (context) => MapBloc()),
+    BlocProvider<MapBloc>(
+        create: (context) =>
+            MapBloc(locationBloc: BlocProvider.of<LocationBloc>(context))),
   ], child: const MapsApp()));
 }
 
