@@ -33,7 +33,7 @@ class GpsBloc extends Bloc<GpsEvent, GpsState> {
         isGpsEnabled: gpsInitStatus[0],
         isGpsPermissionGranted: gpsInitStatus[1]));
   }
-
+  //Verifica si tiene permiso otorgado
   Future<bool> _isPermissionGranted() async {
     final isGranted = await Permission.location.isGranted;
     return isGranted;

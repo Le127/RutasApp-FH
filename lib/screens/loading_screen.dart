@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:maps_app/screens/map_screen.dart';
 import 'package:maps_app/screens/screens.dart';
 
 import '../blocs/blocs.dart';
